@@ -1,3 +1,5 @@
+// import { test} from './test';
+const { test } = require('./test');
 // 暴力破解
 const numsTotal = (nums, target) => {
     let list = [];
@@ -37,9 +39,9 @@ const numsTotal2 = (nums, target) => {
     for (let i = 0; i < nums.length; i++) {
         const key = target - nums[i];
         const index = newList.indexOf(key)
-        if (index!=-1) {
+        if (index != -1) {
             flag = true;
-            return [index,i];
+            return [index, i];
         }
         newList.push(nums[i]);
     }
@@ -48,17 +50,10 @@ const numsTotal2 = (nums, target) => {
     }
 }
 
-const nums = [3, 2, 5, 1];
+const nums = [2, 3, 5, 3];
 const target = 6;
-const test = (cb, items) => {
-    const startDate = Date.now();
-    const result = cb(...items);
-    console.log('结果：', result);
-    const endDate = Date.now();
-    console.log('花费时间：', endDate - startDate);
-}
 
 // test(numsTotal, [nums, target]);
-// test(numsTotal1, [nums, target]);
-test(numsTotal2, [nums, target]);
+test(numsTotal1, [nums, target]);
+// test(numsTotal2, [nums, target]);
 
