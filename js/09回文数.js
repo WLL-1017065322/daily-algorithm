@@ -16,5 +16,31 @@ const method = (value) => {
         }
     }
 }
-const a1 = 0;
-test(method, [a1]);
+
+const method1 = (value) => {
+    if (value < 0) {
+        return false;
+    } else if (value === 0) {
+        return true;
+    } else {
+        let nums = 0;
+        let newValue = value;
+        while (value >= 1) {
+            const num = value % 10;
+            nums = num + nums * 10;
+            value = ~~(value / 10);
+        }
+        if (newValue === nums) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
+
+
+// const a1 = 0;
+// test(method, [a1]);
+const a1 = 1102144212;
+test(method1, [a1]);
