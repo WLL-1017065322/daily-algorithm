@@ -62,7 +62,7 @@ const numsTotal2 = (nums, target) => {
 // 所以返回 [0, 1]
 
 //first 
-var twoSum1 = function(nums, target) {
+var numsTotal3 = function(nums, target) {
     // var arr = {};
     for (var i = 0; i < nums.length; i++) {
         for (var j = i + 1; j < nums.length; j++) {
@@ -75,16 +75,7 @@ var twoSum1 = function(nums, target) {
     }
 }
 
-
-nums = [-2, 6, 1, 7, 15];
-target = -9;
-
-var ts = twoSum1(nums, target)
-console.log(ts)
-
-//second
-
-var twoSum2 = function(nums, target) {
+var numsTotal4 = function(nums, target) {
     var arr = {};
     for (var i = 0; i < nums.length; i++) {
         if (typeof(arr[nums[i]]) !== "undefined") {
@@ -93,18 +84,9 @@ var twoSum2 = function(nums, target) {
         arr[target - nums[i]] = i;
     }
 };
-
-
-nums = [2, 6, 1, 7, 15];
-target = 9;
-
-var ts2 = twoSum2(nums, target)
-console.log(ts2)
-
-
 //暴力搜索
 
-var twoSum = function(nums, target) {
+var numsTotal5 = function(nums, target) {
     var result = [];
     for (var i = 0; i < nums.length; i++) {
         for (var j = i + 1; j < nums.length; j++) {
@@ -121,7 +103,7 @@ var twoSum = function(nums, target) {
 };
 
 // 使用Object（键值对）
-var twoSum = function(nums, target) {
+var numsTotal6 = function(nums, target) {
     var newNums = {};
     var result = [];
     for (var i = 0; i < nums.length; i++) {
@@ -142,7 +124,7 @@ var twoSum = function(nums, target) {
 
 //一遍Object
 
-var twoSum = function(nums, target) {
+var numsTotal7 = function(nums, target) {
     var newNums = {};
     var result = [];
 
@@ -162,7 +144,7 @@ var twoSum = function(nums, target) {
 
 //Map方法
 
-var twoSum = function(nums, target) {
+var numsTotal8 = function(nums, target) {
     var newNums = new Map();
     var result = [];
 
@@ -179,27 +161,15 @@ var twoSum = function(nums, target) {
     }
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const nums = [2, 3, 5, 3];
 const target = 6;
 
 // test(numsTotal, [nums, target]);
 test(numsTotal1, [nums, target]);
-// test(numsTotal2, [nums, target]);
+test(numsTotal2, [nums, target]);
+test(numsTotal3, [nums, target]);
+test(numsTotal4, [nums, target]);
+test(numsTotal5, [nums, target]);
+test(numsTotal6, [nums, target]);
+test(numsTotal7, [nums, target]);
+test(numsTotal8, [nums, target]);
